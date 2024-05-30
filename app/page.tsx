@@ -3,7 +3,7 @@ import { useTranslation } from "@/app/i18n";
 import { fallbackLng, languages } from "@/app/i18n/settings";
 import DataHome from "@/app/components/pages/home/data";
 
-export default async function Home({ params }: { params: { lng: string } }) {
+export default async function Home() {
   // if (languages.indexOf(lng) < 0) lng = fallbackLng;
   // const { t } = await useTranslation(lng, "home");
   const { pagehome } = await DataHome("home");

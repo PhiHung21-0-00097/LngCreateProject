@@ -5,6 +5,7 @@ const DataHome = async (lng) => {
 
   const data = {
     pagehome: t("pagehome"),
+    banner: t("banner"),
   };
   return data;
 };
