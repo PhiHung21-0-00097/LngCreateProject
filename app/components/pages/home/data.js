@@ -6,6 +6,8 @@ const DataHome = async (lng) => {
   const data = {
     pagehome: t("pagehome"),
     banner: t("banner"),
+    product: t("product"),
+    contact: t("contact"),
   };
   return data;
 };

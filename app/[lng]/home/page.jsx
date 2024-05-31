@@ -4,7 +4,6 @@ import React from "react";
 import DataHome from "@/app/components/pages/home/data";
 
 const PageHome = async ({ params: { lng } }) => {
-  const { t } = await useTranslation(lng, "home");
   const { pagehome } = await DataHome(lng);
   return <HomePage lng={lng} pagehome={pagehome} />;
 };
