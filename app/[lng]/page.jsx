@@ -6,6 +6,7 @@ import HomeData from "@/app/components/pages/home/data";
 import { useTranslation } from "@/app/i18n";
 import { fallbackLng, languages } from "@/app/i18n/settings";
 import Banner from "@/app/components/layout/Banner";
+import Models from "@/app/components/layout/Models";
 
 export default async function Home({ params: { lng } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
@@ -15,6 +16,7 @@ export default async function Home({ params: { lng } }) {
   return (
     <main className="">
       <Banner lng={lng} banner={banner} />
+      <Models />
     </main>
   );
 }

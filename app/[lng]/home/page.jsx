@@ -1,11 +1,17 @@
-import HomePage from "@/app/components/layout/HomePage";
-import { useTranslation } from "@/app/i18n";
 import React from "react";
 import DataHome from "@/app/components/pages/home/data";
-
+import Banner from "@/app/components/layout/Banner";
+import Models from "@/app/components/layout/Models";
+import Social from "@/app/components/layout/Social";
 const PageHome = async ({ params: { lng } }) => {
   const { pagehome } = await DataHome(lng);
-  return <HomePage lng={lng} pagehome={pagehome} />;
+  return (
+    <div>
+      <Banner />
+      <Models />
+      <Social />
+    </div>
+  );
 };
 
 export default PageHome;

@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-product {
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 31, 34, 0.3),
+    rgba(25, 31, 34, 0)
+  );
+}
+
+.div-image {
+  background-image: url(https://files.porsche.com/filestore/image/multimedia/none/module-background-leipzig/normal/dc3517d1-1668-11ea-80c6-005056bbdc38;sN/porsche-normal.jpg);
+
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  color: #fff;
+  text-align: center;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.div-color {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+}
