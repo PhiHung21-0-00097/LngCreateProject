@@ -7,16 +7,17 @@ import { useTranslation } from "@/app/i18n";
 import { fallbackLng, languages } from "@/app/i18n/settings";
 import Banner from "@/app/components/layout/Banner";
 import Models from "@/app/components/layout/Models";
-
+import Social from "@/app/components/layout/Social";
 export default async function Home({ params: { lng } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng, "common");
   const { banner } = await HomeData(lng);
 
   return (
-    <main className="">
+    <main>
       <Banner lng={lng} banner={banner} />
       <Models />
+      <Social />
     </main>
   );
 }

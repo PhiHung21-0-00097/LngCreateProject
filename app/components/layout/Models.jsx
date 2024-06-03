@@ -24,7 +24,7 @@ const Models = () => {
           </div>
         </div>
         <div className="col-span-4">
-          <Image src={p1} alt="" />
+          <Image src={p1} alt="" />  
         </div>
         <div className="col-span-4">
           <Image src={p1} alt="" />

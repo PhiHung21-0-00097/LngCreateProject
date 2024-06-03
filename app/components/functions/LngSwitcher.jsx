@@ -20,14 +20,14 @@ const LngSwitcher = () => {
     <>
       <Link
         href={redirectPathName("en")}
-        className={`border-r-2 border-green pr-2 text-sm font-bold hover:text-green ${currentLang === "en" && "text-green"}`}
+        className={` px-2 text-sm font-bold hover:text-white hover:bg-gray-500 ${currentLang === "en" && "text-white bg-gray-500"}`}
       >
         EN
       </Link>
 
       <Link
         href={redirectPathName("vi")}
-        className={`pl-2 pr-4 text-sm font-bold hover:text-green  ${currentLang === "vi" && "text-green"}`}
+        className={`px-2 text-sm font-bold hover:text-white hover:bg-gray-500  ${currentLang === "vi" && "text-white bg-gray-500"}`}
       >
         VI
       </Link>

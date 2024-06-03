@@ -1,12 +1,42 @@
-import React from "react";
-import p2 from "@/public/image/p2.jpg";
-import Image from "next/image";
-import Link from "next/link";
-const Social = () => {
+"use client";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Loading from "@/app/[lng]/loading";
+
+function Social() {
+  const [users, setUsers] = useState([]);
+  const [isLoading, setIsloading] = useState(false);
+  useEffect(() => {
+    setIsloading(true);
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos/1")
+      .then((users) => {
+        setTimeout(() => {
+          setIsloading(false);
+          setUsers(users.data);
+        }, 1000);
+      })
+      .then((err) => console.log(err));
+  }, []);
   return (
     <div className="container my-5">
       <div className="my-3">
         <h1 className="text-[48px] font-bold">Porsche Social</h1>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <span>
+            {users.userId}
+            <br />
+            {users.id}
+            <br />
+            {users.title}
+            <br />
+          </span>
+        )}
+        {/* <Suspense fallbackLng={}>
+          
+        </Suspense> */}
       </div>
       <div className="relative">
         <div className="div-image">
@@ -25,6 +55,5 @@ const Social = () => {
       </div>
     </div>
   );
-};
-
+}
 export default Social;
