@@ -8,6 +8,7 @@ export async function generateMetadata({ params: { lng } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng, "header");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t: common } = await useTranslation(lng, "home");
   return {
     title: t("contact") + " - " + common("home"),

@@ -4,11 +4,12 @@ import React from "react";
 import LngSwitcher from "@/app/components/functions/LngSwitcher";
 import LngLink from "@/app/components/functions/LngLink";
 import Nav from "@/app/components/layout/Nav";
+
 const Header = ({ header, lng }) => {
   return (
     <div className="container text-black my-5">
       <div className="row grid-cols-12 grid justify-between items-center">
-        <div className="col-span-4 flex justify-center items-center">
+        <div className="col-span-6 lg:col-span-4 flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4500 300">
             <LngLink lng={lng} href={""}>
               <title>Porsche</title>
@@ -17,11 +18,11 @@ const Header = ({ header, lng }) => {
           </svg>
         </div>
 
-        <div className="col-span-6 gap-2 flex justify-center">
+        <div className="hidden lg:flex lg:col-span-7 gap-2  justify-end">
           <Nav lng={lng} />
         </div>
 
-        <div className="col-span-2 gap-2 flex justify-end">
+        <div className="col-span-6 lg:col-span-1 gap-2 flex justify-end">
           <LngSwitcher lng={lng} />
         </div>
       </div>

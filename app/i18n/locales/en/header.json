@@ -1,5 +1,7 @@
 {
-    "header": "Header",
-    "product":"Product",
-    "contact":"Contact"
+    "header": {
+        "our": "About us",
+        "features": "Features",
+        "blog": "BLog"
+    }
 }

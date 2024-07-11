@@ -20,7 +20,7 @@ const LngSwitcher = () => {
     <>
       <Link
         href={redirectPathName("en")}
-        className={` px-2 text-sm font-bold hover:text-white hover:bg-gray-500 ${currentLang === "en" && "text-white bg-gray-500"}`}
+        className={`px-2 text-sm font-bold hover:text-white hover:bg-gray-500 ${currentLang === "en" && "text-white bg-gray-500"}`}
       >
         EN
       </Link>
